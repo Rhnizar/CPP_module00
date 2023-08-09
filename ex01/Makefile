@@ -6,13 +6,13 @@
 #    By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/09 18:45:13 by rrhnizar          #+#    #+#              #
-#    Updated: 2023/08/09 18:45:14 by rrhnizar         ###   ########.fr        #
+#    Updated: 2023/08/09 19:08:05 by rrhnizar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-Name = Megaphone
+Name = phonebook
 
-SRC = megaphone.cpp
+SRC = PhoneBook.cpp
 
 
 OBJ = $(SRC:.cpp=.o)
