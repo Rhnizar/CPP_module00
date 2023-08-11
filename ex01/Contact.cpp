@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 10:47:11 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/11 18:38:00 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/11 19:28:02 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,33 @@ void	Phonebook::add_contact(Contact contact)
 	}
 }
 
+std::string	exact_string(std::string str)
+{
+	std::string sub;
+
+	if (str.length() >= 10)
+	{
+		sub = str.substr(0, 9) + ".";
+		return (sub);
+	}
+	else
+		return (str);
+}
+
 void	Phonebook::print_one_contact(int i)
 {
-	std::cout << std::setw(10) << i << " | ";
-	std::cout << std::setw(10) << contacts[i].getFirstname() << " | ";
-	std::cout << std::setw(10) << contacts[i].getLastname() << " | ";
-	std::cout << std::setw(10) << contacts[i].getNickname() << " | ";
+	std::cout << std::setw(10) << i << "|";
+	std::cout << std::setw(10) << exact_string(contacts[i].getFirstname()) << "|";
+	std::cout << std::setw(10) << exact_string(contacts[i].getLastname()) << "|";
+	std::cout << std::setw(10) << exact_string(contacts[i].getNickname()) << "|";
 	std::cout << std::endl;
 }
 
 void	Phonebook::print_contacts(Contact contact)
 {
 	int i = 0;
-	std::cout << std::setw(10) << "Index  |  " << std::setw(10) << "First Name  |  " <<
-	std::setw(10) << "Last Name  |  " <<  std::setw(10) << "Nickname  |  " << std::endl;
+	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" <<
+	std::setw(10) << "Last Name" << "|" <<  std::setw(10) << "Nickname" << "|" << std::endl;
 	std::cout << "--------------------------------------------------" << std::endl;
 	while (i < num_contact)
 	{
