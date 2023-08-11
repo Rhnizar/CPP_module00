@@ -6,14 +6,13 @@
 #    By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/09 18:45:13 by rrhnizar          #+#    #+#              #
-#    Updated: 2023/08/09 19:08:05 by rrhnizar         ###   ########.fr        #
+#    Updated: 2023/08/11 15:15:07 by rrhnizar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 Name = phonebook
 
-SRC = PhoneBook.cpp
-
+SRC = PhoneBook.cpp Contact.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -26,7 +25,7 @@ RFLAG = ${CXX} -Wall -Werror -Wextra -std=c++98
 
 all : ${Name}
 
-${Name} : ${OBJ}
+${Name} : ${OBJ} PhoneBook.hpp
 	${RFLAG} ${OBJ} -o ${Name}
 
 clean :
