@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 19:05:48 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/11 18:10:40 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/13 10:26:40 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@
 #include <string.h>
 #include <iomanip>
 
-class Phonebook {
+class PhoneBook {
 	private:
 	static const int arraysize = 3;
 	Contact	contacts[arraysize];
 	int		num_contact;
 	public:
-	Phonebook();// constractor to initialize num_contact
+	PhoneBook();// constractor to initialize num_contact
 	void	add_contact(Contact contact);
 	void	print_contacts(Contact contact);
 	int		search_contact();

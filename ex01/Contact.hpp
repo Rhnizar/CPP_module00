@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 10:45:43 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/11 12:23:31 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/13 13:36:13 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CONTACT_HPP
 
 #include <iostream>
+#include <strstream>
 
 class Contact
 {

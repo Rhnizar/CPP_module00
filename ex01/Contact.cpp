@@ -6,18 +6,18 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 10:47:11 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/11 19:28:02 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/13 13:56:08 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-Phonebook::Phonebook()
+PhoneBook::PhoneBook()
 {
 	num_contact = 0;
 }
 
-void	Phonebook::add_contact(Contact contact)
+void	PhoneBook::add_contact(Contact contact)
 {
 	int	 i  = 0;
 	if (num_contact < 3)
@@ -49,16 +49,16 @@ std::string	exact_string(std::string str)
 		return (str);
 }
 
-void	Phonebook::print_one_contact(int i)
+void	PhoneBook::print_one_contact(int i)
 {
-	std::cout << std::setw(10) << i << "|";
+	std::cout << std::setw(10) << i + 1<< "|";
 	std::cout << std::setw(10) << exact_string(contacts[i].getFirstname()) << "|";
 	std::cout << std::setw(10) << exact_string(contacts[i].getLastname()) << "|";
 	std::cout << std::setw(10) << exact_string(contacts[i].getNickname()) << "|";
 	std::cout << std::endl;
 }
 
-void	Phonebook::print_contacts(Contact contact)
+void	PhoneBook::print_contacts(Contact contact)
 {
 	int i = 0;
 	std::cout << std::setw(10) << "Index" << "|" << std::setw(10) << "First Name" << "|" <<
@@ -71,25 +71,28 @@ void	Phonebook::print_contacts(Contact contact)
 	}
 }
 
-int	Phonebook::search_contact()
+int	PhoneBook::search_contact()
 {
 	int	index;
-	int	i = 0;
-	std::string input_line;
+	int	i = 1;
+	std::string		input_line;
+	std::strstream	s;
+
 	std::cout <<"enter the contact index to search : ";
 	if (!std::getline(std::cin, input_line))
 		return 10;
-	index = std::atoi(input_line.c_str());
-	while (i < num_contact)
+	s << input_line;
+	s >> index;
+	while (i <= num_contact)
 	{
 		if (i == index)
 		{
-			print_one_contact(i);
+			print_one_contact(i - 1);
 			break;
 		}
 		i++;
 	}
-	if (i != index || i == num_contact)
+	if (i != index || i > num_contact)
 		std::cout << "invalid index !";
 	return 0;
 }

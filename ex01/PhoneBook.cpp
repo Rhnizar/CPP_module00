@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 19:05:32 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/11 18:32:20 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/13 11:00:25 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,11 @@ int	fill_info_contact(Contact &contact)
 }
 
 
+
+
 int	main()
 {
-	Phonebook	myPhonebook;
+	PhoneBook	myPhonebook;
 	std::string	inputline;
 	int	check_re;
 	while(1)
