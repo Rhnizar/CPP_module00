@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 10:47:11 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/13 13:56:08 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/13 14:11:38 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ PhoneBook::PhoneBook()
 
 void	PhoneBook::add_contact(Contact contact)
 {
-	int	 i  = 0;
-	if (num_contact < 3)
+	int	 i = 0;
+	if (num_contact < 8)
 	{
 		contacts[num_contact] = contact;
 		num_contact++;
 	}
 	else
 	{
-		while (i < 2)
+		while (i < 7)
 		{
 			contacts[i] = contacts[i + 1];
 			i++;

@@ -6,7 +6,7 @@
 /*   By: rrhnizar <rrhnizar@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 19:05:48 by rrhnizar          #+#    #+#             */
-/*   Updated: 2023/08/13 10:26:40 by rrhnizar         ###   ########.fr       */
+/*   Updated: 2023/08/13 14:11:07 by rrhnizar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 class PhoneBook {
 	private:
-	static const int arraysize = 3;
+	static const int arraysize = 8;
 	Contact	contacts[arraysize];
 	int		num_contact;
 	public:
